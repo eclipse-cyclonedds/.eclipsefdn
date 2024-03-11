@@ -15,6 +15,9 @@ orgs.newOrg('eclipse-cyclonedds') {
     },
   },
   _repositories+:: [
+    orgs.extendRepo('.eclipsefdn') {
+      private_vulnerability_reporting_enabled: true,
+    },
     orgs.newRepo('cyclonedds') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -23,6 +26,7 @@ orgs.newOrg('eclipse-cyclonedds') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse Cyclone DDS project",
       homepage: "https://projects.eclipse.org/projects/iot.cyclonedds",
+      private_vulnerability_reporting_enabled: true,
       topics+: [
         "dds"
       ],
@@ -50,6 +54,7 @@ orgs.newOrg('eclipse-cyclonedds') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -60,6 +65,7 @@ orgs.newOrg('eclipse-cyclonedds') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -74,6 +80,7 @@ orgs.newOrg('eclipse-cyclonedds') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
