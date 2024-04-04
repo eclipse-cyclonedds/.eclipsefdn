@@ -5,7 +5,6 @@ orgs.newOrg('eclipse-cyclonedds') {
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "",
     name: "Eclipse Cyclone DDS™",
-    readers_can_create_discussions: true,
     security_managers+: [
       "iot-cyclonedds-committers"
     ],
