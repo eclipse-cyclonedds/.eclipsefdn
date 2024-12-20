@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-cyclonedds') {
+orgs.newOrg('iot.cyclonedds', 'eclipse-cyclonedds') {
   settings+: {
     description: "",
     name: "Eclipse Cyclone DDS™",
