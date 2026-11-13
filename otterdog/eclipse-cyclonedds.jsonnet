@@ -86,6 +86,14 @@ orgs.newOrg('iot.cyclonedds', 'eclipse-cyclonedds') {
       private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('cyclonedds-java') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      private_vulnerability_reporting_enabled: true,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('eclipse-cyclonedds.github.io') {
       allow_merge_commit: true,
       allow_update_branch: false,
