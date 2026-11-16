@@ -4,6 +4,7 @@ orgs.newOrg('iot.cyclonedds', 'eclipse-cyclonedds') {
   settings+: {
     description: "",
     name: "Eclipse Cyclone DDS™",
+    deploy_keys_enabled_for_repositories: true,
     web_commit_signoff_required: false,
     workflows+: {
       default_workflow_permissions: "write",
