@@ -9,6 +9,23 @@ orgs.newOrg('iot.cyclonedds', 'eclipse-cyclonedds') {
       default_workflow_permissions: "write",
     },
   },
+  secrets+: [
+    orgs.newOrgSecret('GPG_KEY_ID') {
+      value: "pass:bots/iot.cyclonedds/gpg/key_id",
+    },
+    orgs.newOrgSecret('GPG_PASSPHRASE') {
+      value: "pass:bots/iot.cyclonedds/gpg/passphrase",
+    },
+    orgs.newOrgSecret('GPG_PRIVATE_KEY') {
+      value: "pass:bots/iot.cyclonedds/gpg/secret-subkeys.asc",
+    },
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+      value: "pass:bots/iot.cyclonedds/central.sonatype.org/token-password",
+    },
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+      value: "pass:bots/iot.cyclonedds/central.sonatype.org/token-username",
+    },
+  ],
   _repositories+:: [
     orgs.extendRepo('.eclipsefdn') {
       private_vulnerability_reporting_enabled: true,
